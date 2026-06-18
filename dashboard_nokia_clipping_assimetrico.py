@@ -75,7 +75,7 @@ Q_ideal = np.random.choice([-3, -1, 1, 3], n_sym) / np.sqrt(10)
 sym_tx_norm = (I_ideal + 1j*Q_ideal)
 
 def calc_dist_var_cpe(ibo):
-    A_sat = 10 ** (-ibo / 20) 
+    A_sat = 10 ** (ibo / 20) 
     amp = np.abs(sym_tx_norm)
     clip_mask = amp > A_sat
     sym_clip = np.copy(sym_tx_norm)
